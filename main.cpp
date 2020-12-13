@@ -24,8 +24,8 @@ int main(int argc, char **argv)
         Banner();
         InitDrawBoard(board, boardAux);
         
-        cout << "Row: ";    cin >> row;
-        cout << "Column: "; cin >> column;
+        cout << "\nRow: ";    cin >> row;
+        cout << "\nColumn: "; cin >> column;
         
         boardAux[row][column] = UNCOVERED_BOX;
         ClearTerminal();
