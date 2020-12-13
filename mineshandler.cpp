@@ -26,7 +26,8 @@ int GetNearbyMines(int row, int column, char board[ROWS][COLUMNS]) {
     for(int i = -1; i <= 1; i++) {
         for(int j = -1; j <= 1; j++) {
             try {
-                if(board[row + i][column + j] == MINE) mines++;
+                if((row + i >= 0 && row + i <= ROWS) && (column + j >= 0 && column + j <= COLUMNS)) 
+                    if(board[row + i][column + j] == MINE) mines++;
             } catch(const std::out_of_range& e) {
                 continue;
             }
