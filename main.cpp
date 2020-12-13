@@ -5,6 +5,7 @@
 using namespace std;
 
 int InitDrawBoard(char board[ROWS][COLUMNS], char boardAux[ROWS][COLUMNS]);
+void setMineRandom(char board[ROWS][COLUMNS]);
 void ClearTerminal(void);
 
 int main(int argc, char **argv)
@@ -15,12 +16,10 @@ int main(int argc, char **argv)
     int row, column;
     int inGame = NO_ERROR;
     
-    board[0][2] = MINE;
-    board[0][3] = MINE;
-    board[1][5] = MINE;    
+    setMineRandom(board);   
     
     while(inGame == NO_ERROR) {
-        ClearTerminal();
+        // ClearTerminal();
         InitDrawBoard(board, boardAux);
         
         cout << "Row: ";    cin >> row;
