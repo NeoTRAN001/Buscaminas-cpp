@@ -3,6 +3,8 @@
 
 using namespace std;
 
+int GetNearbyMines(int row, int column, char board[ROWS][COLUMNS]);
+
 void PrintHeaderSeparator() {
     for(int i = 0; i <= COLUMNS; i++) printf("____");
     printf("_\n");
@@ -41,7 +43,7 @@ int InitDrawBoard(char board[ROWS][COLUMNS], char boardAux[ROWS][COLUMNS]) {
                     letterBox = MINE;
                     status = CHOSEN_MINE_ERROR;
                 }
-                else letterBox = 'X'; // _IntToChar(GetNearbyMines(i, j, board));
+                else letterBox = _IntToChar(GetNearbyMines(i, j, board));
             }
             
             printf("| %c ", letterBox);
