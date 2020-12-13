@@ -60,7 +60,7 @@ AS       := /usr/bin/as
 ## User defined environment variables
 ##
 CodeLiteDir:=/usr/share/codelite
-Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/banner.cpp$(ObjectSuffix) $(IntermediateDirectory)/config.cpp$(ObjectSuffix) $(IntermediateDirectory)/drawboard.cpp$(ObjectSuffix) $(IntermediateDirectory)/clean.cpp$(ObjectSuffix) $(IntermediateDirectory)/mineshandler.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/drawboard.cpp$(ObjectSuffix) $(IntermediateDirectory)/mineshandler.cpp$(ObjectSuffix) $(IntermediateDirectory)/config.cpp$(ObjectSuffix) $(IntermediateDirectory)/banner.cpp$(ObjectSuffix) $(IntermediateDirectory)/clean.cpp$(ObjectSuffix) 
 
 
 
@@ -99,13 +99,21 @@ $(IntermediateDirectory)/main.cpp$(DependSuffix): main.cpp
 $(IntermediateDirectory)/main.cpp$(PreprocessSuffix): main.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.cpp$(PreprocessSuffix) main.cpp
 
-$(IntermediateDirectory)/banner.cpp$(ObjectSuffix): banner.cpp $(IntermediateDirectory)/banner.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/neo/Scripts/CPP/Buscaminas/banner.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/banner.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/banner.cpp$(DependSuffix): banner.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/banner.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/banner.cpp$(DependSuffix) -MM banner.cpp
+$(IntermediateDirectory)/drawboard.cpp$(ObjectSuffix): drawboard.cpp $(IntermediateDirectory)/drawboard.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/neo/Scripts/CPP/Buscaminas/drawboard.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/drawboard.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/drawboard.cpp$(DependSuffix): drawboard.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/drawboard.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/drawboard.cpp$(DependSuffix) -MM drawboard.cpp
 
-$(IntermediateDirectory)/banner.cpp$(PreprocessSuffix): banner.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/banner.cpp$(PreprocessSuffix) banner.cpp
+$(IntermediateDirectory)/drawboard.cpp$(PreprocessSuffix): drawboard.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/drawboard.cpp$(PreprocessSuffix) drawboard.cpp
+
+$(IntermediateDirectory)/mineshandler.cpp$(ObjectSuffix): mineshandler.cpp $(IntermediateDirectory)/mineshandler.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/neo/Scripts/CPP/Buscaminas/mineshandler.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/mineshandler.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/mineshandler.cpp$(DependSuffix): mineshandler.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/mineshandler.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/mineshandler.cpp$(DependSuffix) -MM mineshandler.cpp
+
+$(IntermediateDirectory)/mineshandler.cpp$(PreprocessSuffix): mineshandler.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/mineshandler.cpp$(PreprocessSuffix) mineshandler.cpp
 
 $(IntermediateDirectory)/config.cpp$(ObjectSuffix): config.cpp $(IntermediateDirectory)/config.cpp$(DependSuffix)
 	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/neo/Scripts/CPP/Buscaminas/config.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/config.cpp$(ObjectSuffix) $(IncludePath)
@@ -115,13 +123,13 @@ $(IntermediateDirectory)/config.cpp$(DependSuffix): config.cpp
 $(IntermediateDirectory)/config.cpp$(PreprocessSuffix): config.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/config.cpp$(PreprocessSuffix) config.cpp
 
-$(IntermediateDirectory)/drawboard.cpp$(ObjectSuffix): drawboard.cpp $(IntermediateDirectory)/drawboard.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/neo/Scripts/CPP/Buscaminas/drawboard.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/drawboard.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/drawboard.cpp$(DependSuffix): drawboard.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/drawboard.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/drawboard.cpp$(DependSuffix) -MM drawboard.cpp
+$(IntermediateDirectory)/banner.cpp$(ObjectSuffix): banner.cpp $(IntermediateDirectory)/banner.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/neo/Scripts/CPP/Buscaminas/banner.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/banner.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/banner.cpp$(DependSuffix): banner.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/banner.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/banner.cpp$(DependSuffix) -MM banner.cpp
 
-$(IntermediateDirectory)/drawboard.cpp$(PreprocessSuffix): drawboard.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/drawboard.cpp$(PreprocessSuffix) drawboard.cpp
+$(IntermediateDirectory)/banner.cpp$(PreprocessSuffix): banner.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/banner.cpp$(PreprocessSuffix) banner.cpp
 
 $(IntermediateDirectory)/clean.cpp$(ObjectSuffix): clean.cpp $(IntermediateDirectory)/clean.cpp$(DependSuffix)
 	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/neo/Scripts/CPP/Buscaminas/clean.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/clean.cpp$(ObjectSuffix) $(IncludePath)
@@ -130,14 +138,6 @@ $(IntermediateDirectory)/clean.cpp$(DependSuffix): clean.cpp
 
 $(IntermediateDirectory)/clean.cpp$(PreprocessSuffix): clean.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/clean.cpp$(PreprocessSuffix) clean.cpp
-
-$(IntermediateDirectory)/mineshandler.cpp$(ObjectSuffix): mineshandler.cpp $(IntermediateDirectory)/mineshandler.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "/home/neo/Scripts/CPP/Buscaminas/mineshandler.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/mineshandler.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/mineshandler.cpp$(DependSuffix): mineshandler.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/mineshandler.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/mineshandler.cpp$(DependSuffix) -MM mineshandler.cpp
-
-$(IntermediateDirectory)/mineshandler.cpp$(PreprocessSuffix): mineshandler.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/mineshandler.cpp$(PreprocessSuffix) mineshandler.cpp
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)
