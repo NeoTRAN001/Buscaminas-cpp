@@ -1,0 +1,1 @@
+./Debug/main.cpp.o ./Debug/config.cpp.o ./Debug/drawboard.cpp.o ./Debug/clean.cpp.o ./Debug/mineshandler.cpp.o
