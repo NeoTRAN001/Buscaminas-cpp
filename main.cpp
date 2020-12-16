@@ -26,8 +26,6 @@ int main(int argc, char **argv)
     if(MenuGame()) setMineRandom(board, minePosition);
     else SetLastGame(movements, board, boardAux, minePosition);
     
-    setMineRandom(board, minePosition);
-    
     while(inGame == NO_ERROR) {
         // ClearTerminal();
         Banner(movements);

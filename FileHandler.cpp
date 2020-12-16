@@ -47,4 +47,7 @@ void SaveGame(int movements, string minePosition[AMOUNT_OF_MINES], char boardAux
 
 void SetLastGame(int movements, char board[ROWS][COLUMNS], char boardAux[ROWS][COLUMNS], string minePosition[AMOUNT_OF_MINES]) {
     movements = GetMovements();
+    // Obtener posición de minas y guardarlo en el arreglo minePosition
+    // Agregar esas posiciones al arreglo board
+    // Obtener el valor de boardAux None es no selecciona y un espacio es UNCOVERED_BOX
 }
