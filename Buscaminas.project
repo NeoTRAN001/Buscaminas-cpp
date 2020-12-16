@@ -93,6 +93,7 @@
     </Configuration>
   </Settings>
   <VirtualDirectory Name="src">
+    <File Name="FileHandler.cpp"/>
     <File Name="banner.cpp"/>
     <File Name="clean.cpp"/>
     <File Name="mineshandler.cpp"/>

@@ -11,11 +11,12 @@ int RandomRange(int from, int to) {
     return from + (rand() % (to - from + 1));
 }
 
-void setMineRandom(char board[ROWS][COLUMNS]) {
+void setMineRandom(char board[ROWS][COLUMNS], string minePosition[AMOUNT_OF_MINES]) {
     srand(time(NULL));
     for(int i = 0; i < AMOUNT_OF_MINES; i++) {
         int row = RandomRange(i, ROWS - 1);
         int column = RandomRange(i, COLUMNS - 1);
+        minePosition[i] = std::to_string(row) + " " + std::to_string(column);
         board[row][column] = MINE;
     }
 }
