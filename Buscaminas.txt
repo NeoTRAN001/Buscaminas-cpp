@@ -1,1 +1,1 @@
-./Debug/FileHandler.cpp.o ./Debug/clean.cpp.o ./Debug/config.cpp.o ./Debug/mineshandler.cpp.o ./Debug/banner.cpp.o ./Debug/drawboard.cpp.o ./Debug/main.cpp.o
+./Debug/main.cpp.o ./Debug/config.cpp.o ./Debug/FileHandler.cpp.o ./Debug/clean.cpp.o ./Debug/mineshandler.cpp.o ./Debug/banner.cpp.o ./Debug/drawboard.cpp.o

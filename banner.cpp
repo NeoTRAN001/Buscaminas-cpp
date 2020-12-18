@@ -12,14 +12,23 @@ void Banner(int movements) {
 
 int OptionsPlay() {
     int option;
-    cout << "\n1- Seguir jugando\n2- Guardar Partida\n3- Salir\n: ";
+    cout << "\n\n1- Seguir jugando\n2- Guardar Partida\n3- Salir\n: ";
     cin >> option;
     return option;
 }
 
 bool MenuGame() {
     char option;
-    cout << "\n1- Comenzar nueva partida\n2- Última partida jugada\n:";
+    cout << "    __    _  _______  _______    _______  ______    _______  __    _ \n";
+    cout << "   |  |  | ||       ||       |  |       ||    _ |  |   _   ||  |  | |\n";
+    cout << "   |   |_| ||    ___||   _   |  |_     _||   | ||  |  |_|  ||   |_| |\n";
+    cout << "   |       ||   |___ |  | |  |    |   |  |   |_||_ |       ||       |\n";
+    cout << "   |  _    ||    ___||  |_|  |    |   |  |    __  ||       ||  _    |\n";
+    cout << "   | | |   ||   |___ |       |    |   |  |   |  | ||   _   || | |   |\n";
+    cout << "   |_|  |__||_______||_______|    |___|  |___|  |_||__| |__||_|  |__|\n";
+    cout << "   __________________________________________________________________";
+    cout << "\n     | 1- Comenzar nueva partida |   | 2- Última partida jugada  |\n";
+    cout << "   __________________________________________________________________\nR:";
     cin >> option;
     return option == 1;
 }
