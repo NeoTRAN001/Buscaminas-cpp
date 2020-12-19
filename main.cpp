@@ -4,7 +4,7 @@
 
 using namespace std;
 
-void SetLastGame(int movements, char board[ROWS][COLUMNS], char boardAux[ROWS][COLUMNS], string minePosition[AMOUNT_OF_MINES]);
+int SetLastGame(char board[ROWS][COLUMNS], char boardAux[ROWS][COLUMNS], string minePosition[AMOUNT_OF_MINES]);
 void SaveGame(int movements, string minePosition[AMOUNT_OF_MINES], char boardAux[ROWS][COLUMNS]);
 void setMineRandom(char board[ROWS][COLUMNS], string minePosition[AMOUNT_OF_MINES]);
 int InitDrawBoard(char board[ROWS][COLUMNS], char boardAux[ROWS][COLUMNS]);
@@ -24,7 +24,7 @@ int main(int argc, char **argv)
     int inGame = NO_ERROR;
     
     if(MenuGame()) setMineRandom(board, minePosition);
-    else SetLastGame(movements, board, boardAux, minePosition);
+    else movements = SetLastGame(board, boardAux, minePosition);
     
     while(inGame == NO_ERROR) {
         // ClearTerminal();
