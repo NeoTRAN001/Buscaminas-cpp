@@ -16,7 +16,7 @@ void setMineRandom(char board[ROWS][COLUMNS], string minePosition[AMOUNT_OF_MINE
     for(int i = 0; i < AMOUNT_OF_MINES; i++) {
         int row = RandomRange(i, ROWS - 1);
         int column = RandomRange(i, COLUMNS - 1);
-        minePosition[i] = std::to_string(row) + " " + std::to_string(column);
+        minePosition[i] = std::to_string(row) + "" + std::to_string(column);
         board[row][column] = MINE;
     }
 }
