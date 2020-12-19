@@ -2,6 +2,8 @@
 
 using namespace std;
 
+void ClearTerminal(void);
+
 void Banner(int movements) {
     cout << "\n";
     cout << " ===========================================\n";
@@ -19,6 +21,7 @@ int OptionsPlay() {
 
 bool MenuGame() {
     char option;
+    ClearTerminal();
     cout << "    __    _  _______  _______    _______  ______    _______  __    _ \n";
     cout << "   |  |  | ||       ||       |  |       ||    _ |  |   _   ||  |  | |\n";
     cout << "   |   |_| ||    ___||   _   |  |_     _||   | ||  |  |_|  ||   |_| |\n";
@@ -30,5 +33,5 @@ bool MenuGame() {
     cout << "\n     | 1- Comenzar nueva partida |   | 2- Última partida jugada  |\n";
     cout << "   __________________________________________________________________\nR:";
     cin >> option;
-    return option == 1;
+    return option == '1';
 }
